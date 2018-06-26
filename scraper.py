@@ -14,5 +14,7 @@ class Scraper:
             m.download_menu()
 
 
-s = Scraper()
-s.scrape_menus()
+if __name__ == '__main__':
+    s = Scraper()
+    s.scrape_menus()
+
