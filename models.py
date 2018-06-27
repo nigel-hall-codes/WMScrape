@@ -4,6 +4,7 @@ import json
 
 
 db = SqliteDatabase('Medigreen.db')
+# To download: scp root@198.199.93.158:/root/WMScrape2/WMScrape/Medigreen.db /Users/Hallshit/newdir/M3digreen/M3digr33n/WMScraper/venv/Medigreen.db
 
 
 class Product(Model):

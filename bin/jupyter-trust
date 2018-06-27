@@ -1,0 +1,11 @@
+#!/Users/Hallshit/newdir/M3digreen/M3digr33n/WMScraper/venv/bin/python3
+
+# -*- coding: utf-8 -*-
+import re
+import sys
+
+from nbformat.sign import TrustNotebookApp
+
+if __name__ == '__main__':
+    sys.argv[0] = re.sub(r'(-script\.pyw?|\.exe)?$', '', sys.argv[0])
+    sys.exit(TrustNotebookApp.launch_instance())
