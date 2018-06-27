@@ -1,6 +1,10 @@
 import api
 from models import *
 from menu import Menu
+import schedule
+import time
+
+
 class Scraper:
 
     def get_new_dispensaries(self):
@@ -13,8 +17,13 @@ class Scraper:
             m = Menu(d.slug, d._type)
             m.download_menu()
 
-
 if __name__ == '__main__':
+
     s = Scraper()
-    s.scrape_menus()
+    schedule.every().day.at("08:00").do(s.scrape_menus)
+
+    while True:
+        schedule.run_pending()
+        time.sleep(1080)
+
 
