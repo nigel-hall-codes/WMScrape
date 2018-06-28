@@ -13,8 +13,8 @@ class Menu:
 
 
 
-    def download_menu(self):
-        t = datetime.datetime.now()
+    def download_menu(self, t):
+
         for cat in self.data['categories']:
             catID = cat['menu_item_category_id']
             for item in cat['items']:
